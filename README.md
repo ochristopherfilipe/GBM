@@ -1,4 +1,4 @@
-# GBM vs AdaBoost
+# GBM vs AdaBoost vs Stochastic Gradient Boosting
 
 Embora tanto o AdaBoost quanto o GBM sejam algoritmos de boosting que buscam melhorar o desempenho do modelo combinando vários modelos mais fracos, as diferenças na maneira como atribuem pesos às amostras, constroem modelos e ajustam as previsões os tornam adequados para diferentes tipos de problemas e podem levar a resultados diferentes em diferentes cenários.
 
@@ -22,4 +22,40 @@ Embora tanto o AdaBoost quanto o GBM sejam algoritmos de boosting que buscam mel
 
 5. **criterion**: A função para medir a qualidade de uma divisão, que pode ser 'friedman_mse' para erro médio quadrático de Friedman ou 'squared_error' para erro médio quadrático.
 
-6. 
+
+# A maior diferença entre GBM e Stochastic Gradient Boosting
+
+A maior diferença entre os dois modelos é a técnica de treinamento. O GBM usa gradient descent para treinar os fracos aprendizes, enquanto o Stochastic GBM usa stochastic gradient descent. O stochastic gradient descent é uma variante do gradient descent que usa apenas uma amostra aleatória dos dados para calcular o gradiente da função de perda. Isso torna o Stochastic GBM mais rápido de treinar, especialmente em grandes conjuntos de dados.
+
+
+# Resumo do artigo completo de Jerome H. Freedman
+[Artigo](https://jerryfriedman.su.domains/ftp/stobst.pdf)
+
+## Introdução
+
+O artigo apresenta o algoritmo de boosting estocástico, uma modificação do algoritmo de boosting tradicional que usa o gradiente estocástico para treinar os fracos aprendizes. O boosting é um algoritmo de aprendizado de máquina em conjunto que constrói um modelo iterativamente adicionando fracos aprendizes. Em cada iteração, um fraco aprendiz é treinado nos resíduos do modelo anterior. Os resíduos são a diferença entre os valores previstos e os valores reais.
+
+## Gradiente estocástico
+
+O gradiente estocástico é uma variante do gradiente descendente que usa apenas uma amostra aleatória dos dados para calcular o gradiente da função de perda. Isso torna o gradiente estocástico mais rápido de treinar do que o gradiente descendente, especialmente em grandes conjuntos de dados.
+
+## Vantagens do boosting estocástico
+
+O boosting estocástico apresenta várias vantagens sobre o boosting tradicional:
+
+1. É mais rápido de treinar, especialmente em grandes conjuntos de dados.
+2. É mais resistente a overfitting.
+3. Pode ser usado para treinar fracos aprendizes mais complexos.
+Experimentos
+
+O artigo apresenta resultados experimentais que mostram que o boosting estocástico supera outros algoritmos de aprendizado de máquina em uma variedade de tarefas de classificação e regressão.
+
+## Conclusão
+
+O boosting estocástico é um algoritmo de aprendizado de máquina poderoso e versátil que é amplamente utilizado na prática. É uma boa escolha para ambos os problemas de classificação e regressão, e é especialmente adequado para grandes conjuntos de dados.
+
+## Detalhes adicionais
+
+Além das vantagens mencionadas acima, o boosting estocástico também é mais flexível do que o boosting tradicional. Isso ocorre porque o gradiente estocástico é menos propenso a ficar preso em mínimos locais do que o gradiente descendente. Isso significa que o boosting estocástico pode ser usado para treinar fracos aprendizes mais complexos, que podem levar a um melhor desempenho do modelo.
+
+O boosting estocástico é um algoritmo de aprendizado de máquina maduro e bem-sucedido. É uma ferramenta valiosa para uma ampla variedade de problemas de aprendizado de máquina.
