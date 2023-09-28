@@ -25,6 +25,8 @@ Embora tanto o AdaBoost quanto o GBM sejam algoritmos de boosting que buscam mel
 
 # A maior diferença entre GBM e Stochastic Gradient Boosting
 
+Ele faz um subsample do conjunto de dados de treino randomicamente, sem reposição. Fazendo ele ser muito mais rápido e robusto.
+
 A maior diferença entre os dois modelos é a técnica de treinamento. O GBM usa gradient descent para treinar os fracos aprendizes, enquanto o Stochastic GBM usa stochastic gradient descent. O stochastic gradient descent é uma variante do gradient descent que usa apenas uma amostra aleatória dos dados para calcular o gradiente da função de perda. Isso torna o Stochastic GBM mais rápido de treinar, especialmente em grandes conjuntos de dados.
 
 
