@@ -2,6 +2,8 @@
 
 Embora tanto o AdaBoost quanto o GBM sejam algoritmos de boosting que buscam melhorar o desempenho do modelo combinando vários modelos mais fracos, as diferenças na maneira como atribuem pesos às amostras, constroem modelos e ajustam as previsões os tornam adequados para diferentes tipos de problemas e podem levar a resultados diferentes em diferentes cenários.
 
+# Cinco diferenças entre GBM e AdaBoost
+
 1. O GBM constrói um conjunto de modelos, geralmente árvores de decisão, mas de forma sequencial.
 2. O GBM possui um hiperparâmetro chamado learning_rate, que controla a taxa de aprendizado do algoritmo com valores geralmente menores que 0.1, o que evita, na maioria dos casos o overffiting.
 3. No GBM, a previsão final é a soma das previsões dos modelos individuais, sem pesos associados a cada modelo
